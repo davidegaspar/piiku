@@ -22,15 +22,15 @@ class App extends Component {
       cards: cards
     };
     this.handlePeeking = this.handlePeeking.bind(this);
-    this.handleMove = this.handleMove.bind(this);
+    this.handleBump = this.handleBump.bind(this);
     this.saveCards = this.saveCards.bind(this);
   }
   handlePeeking() {
     this.setState({peeking: !this.state.peeking});
   }
-  handleMove(direction) {
+  handleBump(bump) {
     let cards = JSON.parse(JSON.stringify(this.state.cards));
-    cards[this.state.cardIndex].weight = this.getNextFib(cards[this.state.cardIndex].weight, direction);
+    cards[this.state.cardIndex].weight = this.getNextFib(cards[this.state.cardIndex].weight, bump);
     this.setState({cards: cards});
     this.saveCards();
     this.setState({peeking: false, cardIndex: this.getRandomIndex(this.state.cards)});
@@ -52,21 +52,27 @@ class App extends Component {
     }
     return index;
   }
-  getNextFib(number, direction) {
+  getNextFib(number, bump) {
     let sequence = [1, 2, 3, 5, 8];
     let index = sequence.indexOf(number);
-    if (index === -1){
+    if (index === -1 || !bump){
       index = sequence.length - 1;
+    } else {
+      index = Math.max(0, index - 1);
     }
-    index = Math.min(Math.max(0, index + direction), sequence.length - 1);
     return sequence[index];
   }
   componentDidMount() {
     this.setState({peeking: false, cardIndex: this.getRandomIndex(this.state.cards)});
   }
   render() {
+    let weightTotal = this.state.cards.reduce( (accumulator, currentValue) => accumulator + parseInt(currentValue.weight, 10), 0);
+    let progress = (weightTotal - (this.state.cards.length * 1)) / (this.state.cards.length * (8 - 1));
     return (
       <div className="App">
+        <div className="Stats">
+          {Math.floor(100 - (progress * 100))}
+        </div>
         <div className="Card">
           <div className="Info">
             {
@@ -84,9 +90,9 @@ class App extends Component {
             }
           </div>
           <div className="Action">
-            <div className="Demote" onClick={() => {this.handleMove(+1)}}>x</div>
+            <div className="Demote" onClick={() => {this.handleBump(false)}}>x</div>
             <div className="Peek" onClick={this.handlePeeking}>peek</div>
-            <div className="Promote" onClick={() => {this.handleMove(-1)}}>v</div>
+            <div className="Promote" onClick={() => {this.handleBump(true)}}>v</div>
           </div>
         </div>
       </div>
