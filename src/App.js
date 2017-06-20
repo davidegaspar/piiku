@@ -70,8 +70,11 @@ class App extends Component {
     let progress = (weightTotal - (this.state.cards.length * 1)) / (this.state.cards.length * (8 - 1));
     return (
       <div className="App">
+        <div className="Header">
+          ピーク / Peek
+        </div>
         <div className="Stats">
-          {Math.floor(100 - (progress * 100))}
+          <div className="Progress" style={{width: Math.floor(100 - (progress * 100)) + '%'}}></div>
         </div>
         <div className="Card">
           <div className="Info">
@@ -94,6 +97,9 @@ class App extends Component {
             <div className="Peek" onClick={this.handlePeeking}>peek</div>
             <div className="Promote" onClick={() => {this.handleBump(true)}}>v</div>
           </div>
+        </div>
+        <div className="Footer">
+          <a href="mailto:info@davidegaspar.com">info@davidegaspar.com</a>
         </div>
       </div>
     );
