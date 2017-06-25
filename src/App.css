@@ -25,6 +25,9 @@ body *{
 
 .App {
   padding: 10px;
+  width: 100%;
+  max-width: 414px;
+  margin: 0 auto;
 }
 .Footer > a {
   font-size: 12px;
@@ -47,7 +50,7 @@ body *{
   background-color: rgba(3, 169, 244, .1);
 }
 .Card > .Info{
-  padding-bottom: 125%;
+  padding-bottom: 100%;
 }
 .Card > .Info > *{
   position: absolute;
@@ -62,18 +65,18 @@ body *{
 .Card > .Action > *{
   display: inline-block;
   text-align: center;
-  height: 40px;
-  line-height: 40px;
+  height: 80px;
+  line-height: 80px;
 }
 .Card > .Action > .Demote{
-  width: 20%;
+  width: 25%;
   background-color: rgba(244, 3, 3, .75);
 }
 .Card > .Action > .Peek{
-  width: 60%;
+  width: 50%;
   background-color: rgba(3, 169, 244, .75);
 }
 .Card > .Action > .Promote{
-  width: 20%;
+  width: 25%;
     background-color: rgba(140, 244, 3, .75);
 }

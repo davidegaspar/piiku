@@ -5,7 +5,7 @@ flash cards
 ## publish
 ```
 npm run build
-aws s3 cp --recursive build s3://???
+aws s3 cp --recursive build s3://piiku
 ```
 
 ---
