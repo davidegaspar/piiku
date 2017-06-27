@@ -1,223 +1,301 @@
 let data=[
   {
-    "romaji": "I",
-    "kana": "わたし",
+    "romaji": "easy, simple",
+    "kana": "かんたん「な」",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "you",
-    "kana": "あなた",
+    "romaji": "near",
+    "kana": "ちがい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "that person",
-    "kana": "あのひと　（あのかた）",
-    "kanji": "あの人　（あの方）",
-    "weight": "8"
-  },
-  {
-    "romaji": "Mr., Ms.",
-    "kana": "〜さん",
+    "romaji": "far",
+    "kana": "とおい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "child suffix",
-    "kana": "〜ちゃん",
+    "romaji": "fast, early",
+    "kana": "はやい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "national of",
-    "kana": "〜じん",
-    "kanji": "〜人",
-    "weight": "8"
-  },
-  {
-    "romaji": "teacher",
-    "kana": "せんせい",
-    "kanji": "先生",
-    "weight": "8"
-  },
-  {
-    "romaji": "teacher self",
-    "kana": "きょうし",
-    "kanji": "教師",
-    "weight": "8"
-  },
-  {
-    "romaji": "student",
-    "kana": "がくせい",
-    "kanji": "学生",
-    "weight": "8"
-  },
-  {
-    "romaji": "company employee",
-    "kana": "かいしゃいん",
-    "kanji": "会社員",
-    "weight": "8"
-  },
-  {
-    "romaji": "employee of ~ company",
-    "kana": "しゃいん",
-    "kanji": "社員",
-    "weight": "8"
-  },
-  {
-    "romaji": "bank employeee",
-    "kana": "ぎんこういん",
-    "kanji": "銀行員",
-    "weight": "8"
-  },
-  {
-    "romaji": "[medical] doctor",
-    "kana": "いしゃ",
-    "kanji": "医者",
-    "weight": "8"
-  },
-  {
-    "romaji": "researcher",
-    "kana": "けんきゅうしゃ",
-    "kanji": "研究者",
-    "weight": "8"
-  },
-  {
-    "romaji": "university",
-    "kana": "だいがく",
-    "kanji": "大学",
-    "weight": "8"
-  },
-  {
-    "romaji": "hospital",
-    "kana": "びょういん",
-    "kanji": "病院",
-    "weight": "8"
-  },
-  {
-    "romaji": "who",
-    "kana": "だれ　（どなた）",
+    "romaji": "slow, late",
+    "kana": "おそい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "~ years old",
-    "kana": "〜さい",
-    "kanji": "〜歳",
-    "weight": "8"
-  },
-  {
-    "romaji": "how old",
-    "kana": "なんさい",
-    "kanji": "何歳",
-    "weight": "8"
-  },
-  {
-    "romaji": "yes",
-    "kana": "はい",
+    "romaji": "may [people], much",
+    "kana": "おおい「ひとが〜」",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "no",
-    "kana": "いいえ",
+    "romaji": "few [people], a little",
+    "kana": "すくない「ひとが〜」",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "How do you do? (beginning of introduction)",
-    "kana": "はじめまして",
-    "kanji": "。。。",
-    "weight": "8"
-  },
-  {
-    "romaji": "I’m from ~ country",
-    "kana": "〜からきました",
-    "kanji": "。。。",
-    "weight": "8"
-  },
-  {
-    "romaji": "Pleased to meet you. (end of introduction)",
-    "kana": "「どうぞ」よろしく「おねがいします」",
-    "kanji": "。。。",
-    "weight": "8"
-  },
-  {
-    "romaji": "Excuse me but… (asking for personal information)",
-    "kana": "しつれいですが",
-    "kanji": "。。。",
-    "weight": "8"
-  },
-  {
-    "romaji": "May I have your name?",
-    "kana": "おなまえは",
-    "kanji": "。。。",
-    "weight": "8"
-  },
-  {
-    "romaji": "This is Mr./Ms.",
-    "kana": "こちらは〜さんです。",
+    "romaji": "warm",
+    "kana": "あたたかい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "U.S.A.",
-    "kana": "アメリカ",
+    "romaji": "cool",
+    "kana": "すずしい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "U.K.",
-    "kana": "イギリス",
+    "romaji": "sweet",
+    "kana": "あまい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "India",
-    "kana": "インド",
+    "romaji": "hot (taste), spicy",
+    "kana": "からい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "Indonesia",
-    "kana": "インドネジア",
+    "romaji": "heavy (weight)",
+    "kana": "おもい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "South Korea",
-    "kana": "かんこく",
-    "kanji": "韓国",
-    "weight": "8"
-  },
-  {
-    "romaji": "Thailand",
-    "kana": "タイ",
+    "romaji": "light (weight)",
+    "kana": "かるい",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "China",
-    "kana": "ちゅうごく",
-    "kanji": "中国",
-    "weight": "8"
-  },
-  {
-    "romaji": "Germany",
-    "kana": "ドイツ",
+    "romaji": "prefer [coffee]",
+    "kana": "いい「コーヒーが〜」",
     "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "Japan",
-    "kana": "にほん",
-    "kanji": "日本",
+    "romaji": "season",
+    "kana": "きせつ",
+    "kanji": "",
     "weight": "8"
   },
   {
-    "romaji": "Brazil",
-    "kana": "ブラジル",
+    "romaji": "spring",
+    "kana": "はる",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "summer",
+    "kana": "なつ",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "autumn, fall",
+    "kana": "あき",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "winter",
+    "kana": "ふゆ",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "weather",
+    "kana": "てんき",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "rain, rainy",
+    "kana": "あめ",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "snow, snowy",
+    "kana": "ゆき",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "cloudy",
+    "kana": "くもり",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "hotel",
+    "kana": "ホテル",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "airport",
+    "kana": "くうこう",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "sea, ocean",
+    "kana": "うみ",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "world",
+    "kana": "せかい",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "party",
+    "kana": "パーテイー",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "give a party",
+    "kana": "パーテイーをします",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "festival",
+    "kana": "「お」まつり",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "sukiyaki (beef and vegetable hot pot)",
+    "kana": "すきやき",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "sashimi (sliced raw fish)",
+    "kana": "さしみ",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "sushi (vinegared rice topped with raw fish)",
+    "kana": "「お」すし",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "tempura (seafood and vegetables deep fried in batter)",
+    "kana": "てんぷら",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "pork",
+    "kana": "ぶたにく",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "chicken",
+    "kana": "とりにく",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "beef",
+    "kana": "ぎゅうにく",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "lemon",
+    "kana": "レモン",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "flower arrangement",
+    "kana": "いけばな",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "practise flower arrangement",
+    "kana": "いけばなをします",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "maple, red leaves of autumn",
+    "kana": "もみじ",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "which one (of two things)",
+    "kana": "どちら",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "both",
+    "kana": "どちらも",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "the most",
+    "kana": "いちばん",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "by far",
+    "kana": "ずっと",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "for the first time",
+    "kana": "はじめて",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "I’m home.",
+    "kana": "ただいま。",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "Welcome home.",
+    "kana": "おかえりなさい。",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "Wow! Look at all those people!",
+    "kana": "わあ、すごいひとですね。",
+    "kanji": "",
+    "weight": "8"
+  },
+  {
+    "romaji": "I'm tired.",
+    "kana": "つかれました。",
     "kanji": "",
     "weight": "8"
   }

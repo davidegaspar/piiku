@@ -4,8 +4,13 @@ flash cards
 
 ## publish
 ```
-npm run build
-aws s3 cp --recursive build s3://piiku
+npm run build && aws s3 cp --recursive build s3://piiku
+```
+
+## convert
+```
+cd data
+node csv2json.js data.csv
 ```
 
 ---
