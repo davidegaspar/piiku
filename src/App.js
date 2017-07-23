@@ -18,23 +18,58 @@ class App extends Component {
     }
     this.state = {
       peeking: false,
+      fingerX: 0,
       cardIndex: 0,
       cards: cards
     };
-    this.handlePeeking = this.handlePeeking.bind(this);
-    this.handleBump = this.handleBump.bind(this);
+    // this.handlePeeking = this.handlePeeking.bind(this);
+    // this.handleBump = this.handleBump.bind(this);
     this.saveCards = this.saveCards.bind(this);
+    this.handleSwipeStart = this.handleSwipeStart.bind(this);
+    this.handleSwipeEnd = this.handleSwipeEnd.bind(this);
+  }
+  testTouch(e){
+
+    console.log(e.type);
+    // console.log(e.touches);
+    // console.log(e.targetTouches);
+    console.log(e.changedTouches);
+  }
+  handleSwipeStart(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.setState({peeking: true, fingerX: e.changedTouches[0].clientX});
+  }
+  handleSwipeEnd(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    let cards = JSON.parse(JSON.stringify(this.state.cards));
+    let deltaX = Math.abs(e.changedTouches[0].clientX - this.state.fingerX);
+    let bump = e.changedTouches[0].clientX > this.state.fingerX;
+    if (deltaX >= 75) {
+      cards[this.state.cardIndex].weight = this.getNextFib(cards[this.state.cardIndex].weight, bump);
+      this.setState({
+        cards: cards,
+        peeking: false,
+        cardIndex: this.getRandomIndex(this.state.cards)
+      });
+      this.saveCards();
+    } else {
+      this.setState({
+        peeking: false
+      });
+    }
   }
   handlePeeking() {
     this.setState({peeking: !this.state.peeking});
   }
-  handleBump(bump) {
-    let cards = JSON.parse(JSON.stringify(this.state.cards));
-    cards[this.state.cardIndex].weight = this.getNextFib(cards[this.state.cardIndex].weight, bump);
-    this.setState({cards: cards});
-    this.saveCards();
-    this.setState({peeking: false, cardIndex: this.getRandomIndex(this.state.cards)});
-  }
+  // handleBump(bump) {
+  //   let cards = JSON.parse(JSON.stringify(this.state.cards));
+  //   cards[this.state.cardIndex].weight = this.getNextFib(cards[this.state.cardIndex].weight, bump);
+  //   this.setState({cards: cards});
+  //   this.saveCards();
+  //   this.setState({peeking: false, cardIndex: this.getRandomIndex(this.state.cards)});
+  // }
   saveCards() {
     localStorage.setItem('cards', JSON.stringify(this.state.cards));
   }
@@ -88,10 +123,10 @@ class App extends Component {
               </div>
             }
           </div>
-          <div className="Action">
-            <div className="Demote" onClick={() => {this.handleBump(false)}}>x</div>
-            <div className="Peek" onClick={this.handlePeeking}>PEEK</div>
-            <div className="Promote" onClick={() => {this.handleBump(true)}}>v</div>
+          <div className="Action" onTouchStart={this.handleSwipeStart} onTouchEnd={this.handleSwipeEnd}>
+            <div className="Demote">x</div>
+            <div className="Peek">PEEK</div>
+            <div className="Promote">v</div>
           </div>
         </div>
         <div className="Footer">
