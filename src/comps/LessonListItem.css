@@ -1,0 +1,8 @@
+.LessonListItem{
+  position: relative;
+  display: block;
+}
+.LessonListItem > * {
+  position: relative;
+  display: inline-block;
+}

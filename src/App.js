@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import NavBar from './comps/NavBar';
+import Info from './comps/Info';
+import LessonList from './comps/LessonList';
+import Lesson from './comps/Lesson';
 
 class App extends Component {
   constructor(props) {
@@ -20,13 +24,19 @@ class App extends Component {
       peeking: false,
       fingerX: 0,
       cardIndex: 0,
-      cards: cards
+      cards: cards,
+      view: 'center',
+      lesson: 'blah'
     };
     // this.handlePeeking = this.handlePeeking.bind(this);
     // this.handleBump = this.handleBump.bind(this);
     this.saveCards = this.saveCards.bind(this);
     this.handleSwipeStart = this.handleSwipeStart.bind(this);
     this.handleSwipeEnd = this.handleSwipeEnd.bind(this);
+    //
+    this.handleLeft = this.handleLeft.bind(this);
+    this.handleCenter = this.handleCenter.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
   testTouch(e){
 
@@ -100,11 +110,50 @@ class App extends Component {
   componentDidMount() {
     this.setState({peeking: false, cardIndex: this.getRandomIndex(this.state.cards)});
   }
+  handleLeft(){
+    this.setState({
+      view: 'left'
+    });
+  }
+  handleCenter(){
+    this.setState({
+      view: 'center'
+    });
+  }
+  handleSelect(index){
+    console.log(index);
+    this.setState({
+      view: 'right',
+      lesson: this.props.lessons[index],
+    });
+  }
   render() {
     let weightTotal = this.state.cards.reduce( (accumulator, currentValue) => accumulator + parseInt(currentValue.weight, 10), 0);
     let progress = (weightTotal - (this.state.cards.length * 1)) / (this.state.cards.length * (8 - 1));
     return (
       <div className="App">
+        <NavBar
+          show = {true}
+          selected = {this.state.view}
+          leftTitle = "Info"
+          centerTitle = "ピーク"
+          rightTitle = {this.state.lesson.name}
+          onLeft = {this.handleLeft}
+          onCenter = {this.handleCenter}
+        />
+        <Info
+          show = {this.state.view === 'left'}
+        />
+        <LessonList
+          show = {this.state.view === 'center'}
+          list = {this.props.lessons}
+          onSelect = {this.handleSelect}
+        />
+        <Lesson
+          show = {this.state.view === 'right'}
+          lesson = {this.state.lesson}
+        />
+        <hr></hr>
         <div className="Stats">
           <div className="Progress" style={{width: Math.floor(100 - (progress * 100)) + '%'}}></div>
         </div>
