@@ -1,0 +1,41 @@
+.Lesson {
+  width: 100%;
+  height: 100%;
+}
+.Lesson .TitleBar.Red {
+  background-color: rgba(231, 76, 60,1.0);
+}
+.Lesson .TitleBar.Blue {
+  background-color: rgba(52, 152, 219,1.0);
+}
+.Lesson .TitleBar .Title{
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.Lesson .TitleBar .Action{
+  position: absolute;
+  top: 0;
+}
+.Lesson .TitleBar .Action > i{
+  font-size: 32px;
+  height: 48px;
+  line-height: 48px;
+}
+.Lesson .TitleBar .Action.Left{
+  left: 0;
+  text-align: left;
+  padding: 0 32px 0 8px;
+}
+.Lesson .TitleBar .Action.Right{
+  right: 0;
+  text-align: right;
+  padding: 0 8px 0 32px;
+}
+.Lesson .Content {
+  width: 100%;
+  padding: 8px;
+}

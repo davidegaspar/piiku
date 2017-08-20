@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
 
+import './Info.css';
+
 import Utils from '../utils/Utils';
 
 class Info extends Component {
   render() {
     return (
       <div className = "Info">
-        <div className = "InfoBack">
-          <div>Info</div>
-          <i className="fa fa-3x fa-chevron-right" onClick = {this.props.onBack} aria-hidden="true"></i>
+        <div className = "TitleBar">
+          <div className = "Title">
+            Info
+          </div>
+          <div className = "Action Right" onClick = {this.props.onBack}>
+            <i className="fa fa-caret-right"></i>
+          </div>
         </div>
-        <div>
-          some text and contacts
+        <div className = "Content">
+          <p>
+            <a href="mailto:jap@davidegaspar.com">jap@davidegaspar.com</a>
+          </p>
+          <p>
+            <button onClick = {Utils.deleteLessons}>Reset Lessons</button>
+          </p>
         </div>
-        <button onClick = {Utils.deleteLessons}>Reset Lessons</button>
       </div>
     );
   }

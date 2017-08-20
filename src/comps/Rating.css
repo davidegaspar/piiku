@@ -1,3 +1,10 @@
 .Rating {
-  color: orange;
+  color: black;
+}
+.Rating > i{
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.2);
+}
+.Rating > i.Active{
+  color: rgba(255, 255, 255, 0.8);
 }

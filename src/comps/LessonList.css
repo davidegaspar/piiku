@@ -1,0 +1,38 @@
+.LessonList {
+  width: 100%;
+  height: 100%;
+}
+.LessonList .TitleBar {
+  background-color: rgba(241, 196, 15,1.0);
+}
+.LessonList .TitleBar .Title{
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.LessonList .TitleBar .Action{
+  position: absolute;
+  top: 0;
+}
+.LessonList .TitleBar .Action > i{
+  font-size: 32px;
+  height: 48px;
+  line-height: 48px;
+}
+.LessonList .TitleBar .Action.Left{
+  left: 0;
+  text-align: left;
+  padding: 0 32px 0 8px;
+}
+.LessonList .TitleBar .Action.Right{
+  right: 0;
+  text-align: right;
+  padding: 0 8px 0 32px;
+}
+.LessonList .Content {
+  width: 100%;
+  padding: 8px;
+}

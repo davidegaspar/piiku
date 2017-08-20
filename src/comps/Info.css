@@ -1,0 +1,41 @@
+.Info {
+  width: 100%;
+  height: 100%;
+}
+.Info .TitleBar {
+  background-color: rgba(241, 196, 15,1.0);
+}
+.Info .TitleBar .Title{
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.Info .TitleBar .Action{
+  position: absolute;
+  top: 0;
+}
+.Info .TitleBar .Action > i{
+  font-size: 32px;
+  height: 48px;
+  line-height: 48px;
+}
+.Info .TitleBar .Action.Left{
+  left: 0;
+  text-align: left;
+  padding: 0 32px 0 8px;
+}
+.Info .TitleBar .Action.Right{
+  right: 0;
+  text-align: right;
+  padding: 0 8px 0 32px;
+}
+.Info .Content {
+  width: 100%;
+  padding: 16px;
+}
+.Info .Content > p{
+  margin: 32px 0;
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './SwipeCard.css';
+
 import Utils from '../utils/Utils';
 
 import Card from './Card';
@@ -36,8 +38,10 @@ class SwipeCard extends Component {
   render() {
     return (
       <div className = "SwipeCard" onTouchStart={this.handleSwipeStart} onTouchEnd={this.handleSwipeEnd}>
-        <div className = "Success" />
-        <div className = "Failure" />
+        <div className = "Result">
+          <i className="fa fa-check Success"></i>
+          <i className="fa fa-times Failure"></i>
+        </div>
         <Card
           AText = {this.props.card.kana}
           ASubText = {this.props.card.kanji}

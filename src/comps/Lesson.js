@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Lesson.css';
+
 import Utils from '../utils/Utils';
 
 import SwipeCard from './SwipeCard';
@@ -25,16 +27,20 @@ class Lesson extends Component {
   render() {
     return (
       <div className = "Lesson">
-        <div className = "LessonBack">
-          <i className="fa fa-3x fa-chevron-left" onClick = {this.props.onBack} aria-hidden="true"></i>
+        <div className = {'TitleBar ' + this.props.lesson.book}>
+          <div className = "Title">
+            Chapter {this.props.lesson.chapter}
+          </div>
+          <div className = "Action Left" onClick = {this.props.onBack}>
+            <i className="fa fa-caret-left"></i>
+          </div>
         </div>
-        {this.props.lesson.name}
-        {this.props.lesson.book}
-        {this.props.lesson.cards.length}
-        <SwipeCard
-          card = {this.props.lesson.cards[this.state.cardIndex]}
-          onCardUpdate = {this.handleCardUpdate}
-        />
+        <div className = "Content">
+          <SwipeCard
+            card = {this.props.lesson.cards[this.state.cardIndex]}
+            onCardUpdate = {this.handleCardUpdate}
+          />
+        </div>
       </div>
     );
   }

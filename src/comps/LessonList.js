@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
 
+import './LessonList.css';
+
 import LessonListItem from './LessonListItem';
 
 class LessonList extends Component {
   render() {
     return (
       <div className = "LessonList">
-        <div className = "LessonListLeft">
-          <i className="fa fa-3x fa-info-circle" onClick = {this.props.onLeft} aria-hidden="true"></i>
-          <div>ピーク</div>
+        <div className = "TitleBar">
+          <div className = "Title">
+            ピーク
+          </div>
+          <div className = "Action Left" onClick = {this.props.onLeft}>
+            <i className="fa fa-question-circle"></i>
+          </div>
         </div>
-        {this.props.list.map((item, index) =>
-          <LessonListItem
-            key = {index}
-            lesson = {item}
-            onSelect = {() => {this.props.onSelect(index)}}
-          />
-        )}
+        <div className = "Content">
+          {this.props.list.map((item, index) =>
+            <LessonListItem
+              key = {index}
+              lesson = {item}
+              onSelect = {() => {this.props.onSelect(index)}}
+            />
+          )}
+        </div>
       </div>
     );
   }

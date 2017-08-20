@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import Rating from './Rating';
+
 import './LessonListItem.css';
+
+import Rating from './Rating';
 
 class LessonListItem extends Component {
   render() {
-    // calculate rating from elements
-    let weightTotal = this.props.lesson.cards.reduce( (accumulator, currentValue) => accumulator + parseInt(currentValue.weight, 10), 0);
-    let progress = (weightTotal - (this.props.lesson.cards.length * 1)) / (this.props.lesson.cards.length * (8 - 1));
-    let rating = Math.floor(5 - (progress * 5));
     return (
-      <div className = "LessonListItem" onClick = {this.props.onSelect}>
-        <div style={{backgroundColor: this.props.lesson.book}}>{this.props.lesson.book}</div>
-        <div>{this.props.lesson.name}</div>
+      <div className = {'LessonListItem ' + this.props.lesson.book} onClick = {this.props.onSelect}>
+        <div className = "Chapter">Chapter {this.props.lesson.chapter}</div>
         <Rating
-          value = {rating}
+          cards = {this.props.lesson.cards}
         />
       </div>
     );

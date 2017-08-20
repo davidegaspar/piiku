@@ -1,7 +1,7 @@
 let data=[
   {
-    "name": "L1",
-    "book": "red",
+    "chapter": "1",
+    "book": "Red",
     "cards": [
       {
         "romaji": "easy, simple",
@@ -72,8 +72,8 @@ let data=[
     ]
   },
   {
-    "name": "L2",
-    "book": "red",
+    "chapter": "2",
+    "book": "Red",
     "cards": [
       {
         "romaji": "heavy (weight)",
@@ -138,8 +138,8 @@ let data=[
     ]
   },
   {
-    "name": "L3",
-    "book": "red",
+    "chapter": "3",
+    "book": "Red",
     "cards": [
       {
         "romaji": "winter",
@@ -226,7 +226,7 @@ let data=[
         "weight": 8
       },
       {
-        "romaji": "sushi (vinegared rice topped with raw fish)",
+        "romaji": "sushi (vinegaRed rice topped with raw fish)",
         "kana": "「お」すし",
         "kanji": "",
         "weight": 8
@@ -256,7 +256,7 @@ let data=[
         "weight": 8
       },
       {
-        "romaji": "maple, red leaves of autumn",
+        "romaji": "maple, Red leaves of autumn",
         "kana": "もみじ",
         "kanji": "",
         "weight": 8
@@ -282,8 +282,8 @@ let data=[
     ]
   },
   {
-    "name": "L1",
-    "book": "blue",
+    "chapter": "1",
+    "book": "Blue",
     "cards": [
       {
         "romaji": "by far",
@@ -306,8 +306,8 @@ let data=[
     ]
   },
   {
-    "name": "L2",
-    "book": "blue",
+    "chapter": "2",
+    "book": "Blue",
     "cards": [
       {
         "romaji": "Welcome home.",
@@ -322,7 +322,7 @@ let data=[
         "weight": 5
       },
       {
-        "romaji": "I'm tired.",
+        "romaji": "I'm tiRed.",
         "kana": "つかれました。",
         "kanji": "",
         "weight": 8
@@ -330,8 +330,8 @@ let data=[
     ]
   },
   {
-    "name": "L3",
-    "book": "blue",
+    "chapter": "3",
+    "book": "Blue",
     "cards": [
       {
         "romaji": "Welcome home.",
@@ -346,7 +346,7 @@ let data=[
         "weight": 5
       },
       {
-        "romaji": "I'm tired.",
+        "romaji": "I'm tiRed.",
         "kana": "つかれました。",
         "kanji": "",
         "weight": 3
@@ -354,8 +354,8 @@ let data=[
     ]
   },
   {
-    "name": "L4",
-    "book": "blue",
+    "chapter": "4",
+    "book": "Blue",
     "cards": [
       {
         "romaji": "Welcome home.",
@@ -370,7 +370,7 @@ let data=[
         "weight": 3
       },
       {
-        "romaji": "I'm tired.",
+        "romaji": "I'm tiRed.",
         "kana": "つかれました。",
         "kanji": "",
         "weight": 5
@@ -378,8 +378,8 @@ let data=[
     ]
   },
   {
-    "name": "L5",
-    "book": "blue",
+    "chapter": "5",
+    "book": "Blue",
     "cards": [
       {
         "romaji": "Welcome home.",
@@ -394,7 +394,7 @@ let data=[
         "weight": 2
       },
       {
-        "romaji": "I'm tired.",
+        "romaji": "I'm tiRed.",
         "kana": "つかれました。",
         "kanji": "",
         "weight": 3
@@ -402,8 +402,8 @@ let data=[
     ]
   },
   {
-    "name": "L6",
-    "book": "blue",
+    "chapter": "6",
+    "book": "Blue",
     "cards": [
       {
         "romaji": "Welcome home.",
@@ -418,7 +418,7 @@ let data=[
         "weight": 1
       },
       {
-        "romaji": "I'm tired.",
+        "romaji": "I'm tiRed.",
         "kana": "つかれました。",
         "kanji": "",
         "weight": 1
