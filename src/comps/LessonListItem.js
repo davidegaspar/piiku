@@ -4,9 +4,6 @@ import './LessonListItem.css';
 
 class LessonListItem extends Component {
   render() {
-    // if (!this.props.show) {
-    //   return null;
-    // }
     // calculate rating from elements
     let weightTotal = this.props.lesson.cards.reduce( (accumulator, currentValue) => accumulator + parseInt(currentValue.weight, 10), 0);
     let progress = (weightTotal - (this.props.lesson.cards.length * 1)) / (this.props.lesson.cards.length * (8 - 1));

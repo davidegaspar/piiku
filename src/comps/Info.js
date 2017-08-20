@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
+import Utils from '../utils/Utils';
+
 class Info extends Component {
-  componentDidMount() {
-
-  }
-  componentWillUnmount() {
-
-  }
   render() {
-    if (!this.props.show) {
-      return null;
-    }
     return (
       <div className = "Info">
-        some text and contacts
+        <div className = "InfoBack">
+          <div>Info</div>
+          <i className="fa fa-3x fa-chevron-right" onClick = {this.props.onBack} aria-hidden="true"></i>
+        </div>
+        <div>
+          some text and contacts
+        </div>
+        <button onClick = {Utils.deleteLessons}>Reset Lessons</button>
       </div>
     );
   }

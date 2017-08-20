@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 class Card extends Component {
-  componentDidMount() {
-
-  }
-  componentWillUnmount() {
-
-  }
   render() {
-    if (!this.props.show) {
-      return null;
-    }
     return (
       <div className = "Card">
-        Card
+        {this.props.flipped ? (
+          <div>{this.props.BText}</div>
+        ) : (
+          <div>{this.props.AText}</div>
+        )}
+        {this.props.flipped ? (
+          <div>{this.props.BSubText}</div>
+        ) : (
+          <div>{this.props.ASubText}</div>
+        )}
       </div>
     );
   }
