@@ -5,6 +5,7 @@ import './Lesson.css';
 import Utils from '../utils/Utils';
 
 import SwipeCard from './SwipeCard';
+import Rating from './Rating';
 
 class Lesson extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Lesson extends Component {
     this.handleCardUpdate = this.handleCardUpdate.bind(this);
   }
   handleCardUpdate(newCard){
+    console.log(newCard);
     // update lesson
     let newLesson = Utils.cloneObject(this.props.lesson);
     newLesson.cards[this.state.cardIndex] = newCard;
@@ -34,6 +36,9 @@ class Lesson extends Component {
           <div className = "Action Left" onClick = {this.props.onBack}>
             <i className="fa fa-caret-left"></i>
           </div>
+          <Rating
+            cards = {this.props.lesson.cards}
+          />
         </div>
         <div className = "Content">
           <SwipeCard

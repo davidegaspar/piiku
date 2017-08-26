@@ -15,6 +15,7 @@
   line-height: 48px;
   font-weight: bold;
   font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
 }
 .Lesson .TitleBar .Action{
   position: absolute;
@@ -34,6 +35,10 @@
   right: 0;
   text-align: right;
   padding: 0 8px 0 32px;
+}
+.Lesson .TitleBar .Rating{
+  padding: 8px;
+  text-align: center;
 }
 .Lesson .Content {
   width: 100%;

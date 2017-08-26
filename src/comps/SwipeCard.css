@@ -1,6 +1,5 @@
 .SwipeCard {
   width: 100%;
-  background-color: rgba(149, 165, 166,1.0);
 }
 
 .SwipeCard .Result{
@@ -9,11 +8,13 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+  color: white;
 }
 
 .SwipeCard .Result > * {
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 40%;
   font-size: 64px;
   padding: 16px;
@@ -23,7 +24,13 @@
   left: 0;
   text-align: left;
 }
+.SwipeCard .Result .Success.Active{
+  color: rgba(46, 204, 113,1.0);
+}
 .SwipeCard .Result .Failure{
   right: 0;
   text-align: right;
+}
+.SwipeCard .Result .Failure.Active{
+  color: rgba(231, 76, 60,1.0);
 }

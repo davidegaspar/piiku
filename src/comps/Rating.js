@@ -13,11 +13,11 @@ class Rating extends Component {
     };
     return (
       <div className = "Rating">
-        <i className={"fa fa-circle" + getState(rating, 5)}></i>
-        <i className={"fa fa-circle" + getState(rating, 4)}></i>
-        <i className={"fa fa-circle" + getState(rating, 3)}></i>
-        <i className={"fa fa-circle" + getState(rating, 2)}></i>
         <i className={"fa fa-circle" + getState(rating, 1)}></i>
+        <i className={"fa fa-circle" + getState(rating, 2)}></i>
+        <i className={"fa fa-circle" + getState(rating, 3)}></i>
+        <i className={"fa fa-circle" + getState(rating, 4)}></i>
+        <i className={"fa fa-circle" + getState(rating, 5)}></i>
       </div>
     );
   }
