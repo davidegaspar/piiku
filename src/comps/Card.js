@@ -20,16 +20,14 @@ class Card extends Component {
     }
     return (
       <div className = {`Card${additionalClasses}`} style = {style}>
-        {this.props.flipped ? (
-          <div className = "Text">{this.props.BText}</div>
-        ) : (
-          <div className = "Text">{this.props.AText}</div>
-        )}
-        {this.props.flipped ? (
-          <div className = "subText">{this.props.BSubText}</div>
-        ) : (
-          <div className = "subText">{this.props.ASubText}</div>
-        )}
+        <div className = "Info">
+          <div className = "Text">
+            {this.props.flipped ? this.props.BText : this.props.AText}
+          </div>
+          <div className = "SubText">
+            {this.props.flipped ? this.props.BSubText : this.props.ASubText}
+          </div>
+        </div>
       </div>
     );
   }

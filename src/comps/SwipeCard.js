@@ -65,7 +65,7 @@ class SwipeCard extends Component {
           AText = {this.props.card.kana}
           ASubText = {this.props.card.kanji}
           BText = {this.props.card.romaji}
-          BSubText = {this.props.card.weight}
+          BSubText = {this.props.card.info}
           flipped = {this.state.peeking}
           animated = {this.state.animated}
           translateX = {this.state.translateX}
