@@ -31,7 +31,7 @@ class Lesson extends Component {
       <div className = "Lesson">
         <div className = {'TitleBar ' + this.props.lesson.book}>
           <div className = "Title">
-            Chapter {this.props.lesson.chapter}
+            Lesson {this.props.lesson.lesson}
           </div>
           <div className = "Action Left" onClick = {this.props.onBack}>
             <i className="fa fa-caret-left"></i>

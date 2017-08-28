@@ -1,6 +1,6 @@
 let data=[
   {
-    "chapter": "1",
+    "lesson": "1",
     "book": "Red",
     "cards": [
       {
@@ -72,7 +72,7 @@ let data=[
     ]
   },
   {
-    "chapter": "2",
+    "lesson": "2",
     "book": "Red",
     "cards": [
       {
@@ -138,7 +138,7 @@ let data=[
     ]
   },
   {
-    "chapter": "3",
+    "lesson": "3",
     "book": "Red",
     "cards": [
       {
@@ -282,7 +282,7 @@ let data=[
     ]
   },
   {
-    "chapter": "1",
+    "lesson": "1",
     "book": "Blue",
     "cards": [
       {
@@ -306,7 +306,7 @@ let data=[
     ]
   },
   {
-    "chapter": "2",
+    "lesson": "2",
     "book": "Blue",
     "cards": [
       {
@@ -330,7 +330,7 @@ let data=[
     ]
   },
   {
-    "chapter": "3",
+    "lesson": "3",
     "book": "Blue",
     "cards": [
       {
@@ -354,7 +354,7 @@ let data=[
     ]
   },
   {
-    "chapter": "4",
+    "lesson": "4",
     "book": "Blue",
     "cards": [
       {
@@ -378,7 +378,7 @@ let data=[
     ]
   },
   {
-    "chapter": "5",
+    "lesson": "5",
     "book": "Blue",
     "cards": [
       {
@@ -402,7 +402,7 @@ let data=[
     ]
   },
   {
-    "chapter": "6",
+    "lesson": "6",
     "book": "Blue",
     "cards": [
       {
