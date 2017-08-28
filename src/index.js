@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import lessons from './lessons.js';
+import lessons from './test_lessons.js';
 
 ReactDOM.render(
   <App
