@@ -27,9 +27,10 @@ class Lesson extends Component {
     });
   }
   render() {
+    let bookColors = ['Black', 'Red', 'Blue'];
     return (
       <div className = "Lesson">
-        <div className = {'TitleBar ' + this.props.lesson.book}>
+        <div className = {'TitleBar ' + bookColors[this.props.lesson.book]}>
           <div className = "Title">
             Lesson {this.props.lesson.lesson}
           </div>
